@@ -1,9 +1,7 @@
 # DBMS
 
--- Drop old table (optional if already created)
 DROP TABLE IF EXISTS employees;
 
--- Create table
 CREATE TABLE employees (
     emp_id INT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
@@ -11,32 +9,22 @@ CREATE TABLE employees (
     salary DECIMAL(10,2) NOT NULL
 );
 
--- Insert values (designed for all queries)
 INSERT INTO employees (emp_id, name, department_id, salary) VALUES
--- Dept 10 (4 employees, range >20k, avg >50k)
 (1, 'Alice', 10, 55000),
 (2, 'Bob', 10, 72000),
 (3, 'Charlie', 10, 48000),
 (4, 'Diana', 10, 80000),
-
--- Dept 20 (5 employees, two >60k, total ~300k)
 (5, 'Eve', 20, 65000),
 (6, 'Frank', 20, 70000),
 (7, 'George', 20, 62000),
 (8, 'Hannah', 20, 60000),
 (9, 'Ian', 20, 43000),
-
--- Dept 30 (3 employees, high salaries, avg > company avg)
 (10, 'Jack', 30, 85000),
 (11, 'Karen', 30, 90000),
 (12, 'Leo', 30, 87000),
-
--- Dept 40 (3 employees, all salaries >=40k, low avg <60k, but one >70k)
 (13, 'Mona', 40, 72000),
 (14, 'Nick', 40, 45000),
 (15, 'Olivia', 40, 41000),
-
--- Dept 50 (2 employees, no one below 40k, total salary between 80k–150k)
 (16, 'Paul', 50, 42000),
 (17, 'Quinn', 50, 46000);
 
