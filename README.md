@@ -1,4 +1,4 @@
-# DSA
+# DBMS
 
 -- Drop old table (optional if already created)
 DROP TABLE IF EXISTS employees;
